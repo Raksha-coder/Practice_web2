@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(226, 194, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+}
+
+
+
+/* upper part */
+.progress_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+}
+
+/* starting of progress which is empty */
+.progress_container::before{
+    content: " ";
+    background-color: white;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* upper side */
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.progress{
+    background-color: blueviolet;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 10px;
+    z-index: -1;
+    transition: 0.4s ease;
+
+}
+
+
+
+
+.circle{
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+    border: 3.5px solid rgb(168, 168, 168);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.active{
+    
+    border-color:blueviolet;
+}
+
+/* button part */
+.button{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    outline: none;
+}
+
+
+button:disabled{
+    background-color: rgb(168, 168, 168);
+    cursor: not-allowed;
+}
